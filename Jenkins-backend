@@ -24,6 +24,7 @@ pipeline {
           steps {
             checkout scm
             sh './mvnw compile'
+            sh "printenv"
           }
         }
         stage('Test') {
