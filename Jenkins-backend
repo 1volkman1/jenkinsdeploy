@@ -5,11 +5,11 @@ pipeline {
     skipDefaultCheckout()
   }
   environment {
-    IMAGE_BASE = '1volkman1/jenkinsdeploy'
+    IMAGE_BASE = '1volkman1/msvc-backend
     IMAGE_TAG = "v$BUILD_NUMBER"
     IMAGE_NAME = "${env.IMAGE_BASE}:${env.IMAGE_TAG}"
     IMAGE_NAME_LATEST = "${env.IMAGE_BASE}:latest"
-    DOCKERFILE_NAME = "Dockerfile-backend"
+    DOCKERFILE_NAME = "Dockerfile-packaged"
   }
   stages {
     stage("Prepare container") {
